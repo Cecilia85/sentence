@@ -5,15 +5,17 @@ var sentence=$("input#sentence").val();
 
 
 
-
+var shortWords=[];
 var splitSentence= sentence.split(" ");
 splitSentence.forEach(function(word) {
-  return(word);
-  // var shortWords=word.size(3);
+
+  if(word.length >= 3){
+  return(shortWords);
+}
 
 
 });
-var strReverse = splitSentence.reverse().join('');
-alert('You said ' + splitSentence + '!');
+var strReverse = shortWords.reverse().join(', ');
+alert('You said ' + strReverse + '!');
 });
 });
